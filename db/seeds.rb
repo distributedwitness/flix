@@ -178,40 +178,31 @@ Movie.create!([
 Genre.create!([
   {
     name: "Action"
-  }
-
+  },
   {
     name: "Comedy"
-  }
-
+  },
   {
     name: "Drama"
-  }
-
+  },
   {
     name: "Romance"
-  }
-
+  },
   {
     name: "Thriller"
-  }
-
+  },
   {
     name: "Fantasy"
-  }
-
+  },
   {
     name: "Documentary"
-  }
-
+  },
   {
     name: "Adventure"
-  }
-
+  },
   {
     name: "Animation"
-  }
-
+  },
   {
     name: "Sci-Fi"
   } 
