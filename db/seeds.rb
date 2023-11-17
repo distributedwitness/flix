@@ -207,3 +207,23 @@ Genre.create!([
     name: "Sci-Fi"
   } 
 ])
+
+# Upload the images to the movies from the app/assets/images directory
+[["Avengers: Endgame", "avengers-end-game.png"],
+["Black Panther", "black-panther.png"],
+["Avengers: Infinity War", "avengers-infinity-war.png"],
+["Green Lantern", "green-lantern.png"],
+["Fantastic Four", "fantastic-four.png"],
+["Iron Man", "ironman.png"],
+["Superman", "superman.png"],
+["Spider-Man", "spiderman.png"],
+["Batman", "batman.png"],
+["Catwoman", "catwoman.png"],
+["Wonder Woman", "wonder-woman.png"],
+["Hulk", "hulk.png"],
+["Captain Marvel", "captain-marvel.png"]
+].each do | movie_title, movie_filename |
+  movie = Movie.find_by!(title: movie_title)
+  file = File.open(Rails.root.join("app/assets/images/#{movie_filename}"))
+  movie.main_image.attach(io: file, filename: movie_filename)
+end
